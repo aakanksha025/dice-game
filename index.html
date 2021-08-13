@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dice Roll</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+        <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body background="images/background.jpg">
+        <div class="heading">
+            <h1>ROLL DICE</h1>
+        </div>
+        <div class="score-wrapper">
+            SCORE<br><br>
+            <div class="score">
+                <div id="player1-name">PLAYER 1</div><br>
+                
+                <div class="score-player">
+                    <div class="scored" id="p11">0</div>
+                    <div class="scored" id="p12">0</div>
+                    <div class="scored" id="p13">0</div>
+                    <div class="scored" id="p14">0</div>
+                    <div class="scored" id="p15">0</div>
+                </div><br>
+            </div>
+            <div class="score">
+                <div id="player2-name">PLAYER 2</div><br>
+                <div class="score-player">
+                    <div class="scored" id="p21">0</div>
+                    <div class="scored" id="p22">0</div>
+                    <div class="scored" id="p23">0</div>
+                    <div class="scored" id="p24">0</div>
+                    <div class="scored" id="p25">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="result"><p id="res"></p><br>
+            <button id="myBtn" onclick="namemodal()">CHANGE NAMES</button>
+            
+            <button onclick="window.location.reload();"><i class="fa fa-refresh" aria-hidden="true"> </i>  NEW GAME</button>
+        </div>
+        <div id="myModal" class="modal">
+
+                <div class="modal-content">
+                  <span class="close">&times;</span><br><br>
+                  <p>Name of Player 1: 
+                      <input type="text" id="name1" value="Player1" onkeyup="displayname1()"><br><br>
+                      Name of Player 2: 
+                      <input type="text" id="name2" value="Player2" onkeyup="displayname2()"><br><br>
+                  </p>
+                </div>
+              
+              </div>
+
+        <div class="game">
+            <div class="player">
+                <div id="disname1">PLAYER 1</div>
+                <img src="images/dice1.jpg" id="imgone"/><br>
+                <button id="btnone" onclick="rollone()" onclick="add1()">ROLL THE DICE</button>
+            </div>
+            <div class="player">
+                <div id="disname2">PLAYER 2</div>
+                <img src="images/dice1.jpg" id="imgtwo"/><br>
+                <button id="btntwo" onclick="rolltwo()">ROLL THE DICE</button>
+            </div>
+        </div> 
+    </body>
+</html>
